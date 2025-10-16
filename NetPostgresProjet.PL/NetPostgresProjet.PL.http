@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+@NetPostgresProjet.PL_HostAddress = http://localhost:5085
+=======
+@NetPostgresProjet.PL_HostAddress = http://localhost:5147
+>>>>>>> 5017c82d8fee8ee1a3cd0490a4f4e5d70b16cc6e
+
+GET {{NetPostgresProjet.PL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
