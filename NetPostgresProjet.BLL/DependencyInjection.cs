@@ -1,15 +1,20 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using NetPostgresProjet.BLL.Interfaces;
+using NetPostgresProjet.BLL.Services;
 
 namespace NetPostgresProjet.BLL
 {
-    public static class DependencyInjection
+    public static class ServiceExtensions
     {
         public static IServiceCollection AddBLLServices(this IServiceCollection services)
         {
-            // Nous ajouterons les implémentations de services plus tard
-            // services.AddScoped<IPatientService, PatientService>();
-            // services.AddScoped<IEmployeService, EmployeService>();
-            
+            // Nouveaux services
+            services.AddScoped<IChambresService, ChambresService>();
+            services.AddScoped<IDossierPatientService, DossierPatientService>();
+            services.AddScoped<IFactureService, FactureService>();
+            services.AddScoped<IHospitalisationService, HospitalisationService>();
+            services.AddScoped<IOrdonnanceService, OrdonnanceService>();
+
             return services;
         }
     }
